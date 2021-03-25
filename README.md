@@ -1,2 +1,2 @@
-# notas
+# Notas
 Programa que calcula notas
