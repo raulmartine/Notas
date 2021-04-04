@@ -33,7 +33,7 @@ public class Trabajos {
 		if (aprsus=false) {
 			nota=3;
 		}
-		return nota;
+		return nota ;
 	}
 	
 
