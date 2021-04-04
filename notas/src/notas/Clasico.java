@@ -1,18 +1,19 @@
 package notas;
 
-import java.util.ArrayList;
+public class Clasico extends Tipo{
+	
+	
 
-public class Clasico extends examenes {
-
-	public Clasico(ArrayList<Double> notas) {
-		super(notas);
-		
+	
+	public Clasico(double nota) {
+		this.nota=nota;
 	}
-
+	
 	@Override
-	public double tipoExamen() {
-		// TODO Auto-generated method stub
-		return 0;
+	public String toString() {
+		return super.toString();
 	}
-
+	
 }
+	
+

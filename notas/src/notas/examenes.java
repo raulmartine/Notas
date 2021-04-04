@@ -6,25 +6,14 @@ public abstract class examenes {
 	
 	ArrayList <Double> notas = new ArrayList <Double>(5);
 
-	public examenes(ArrayList<Double> notas){
-		this.notas=notas;
-		//falta hacer cosas
+	public examenes(Clasico n1, Clasico n2, Clasico n3, Test t1, Test t2){
+		
 	}
 	
 	//o hacer clasico y test el mismo y hacerlo abstracto
 	public abstract double tipoExamen();
 	
-	
-	public double clasico() {
-		double nota=0;
-		if (nota>10 && nota<0) {
-			//me cago en tu puta madr
-		}
-		else {
-			//está en el rango
-		}
-		return nota;
-	}
+
 	
 	public double  test(int bien, int mal) {
 		double nota=0;
@@ -45,5 +34,10 @@ public abstract class examenes {
 		
 		return nota;
 	}
+
+	
+		
+	
+	
 	
 }
