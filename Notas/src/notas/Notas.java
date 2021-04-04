@@ -1,6 +1,6 @@
 package notas;
-public class Notas {
 
+public class Notas {
 	private double examen1;
 	private double examen2;
 	private double examen3;
