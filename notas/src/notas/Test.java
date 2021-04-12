@@ -1,6 +1,6 @@
 package notas;
 
-public class Test extends Tipo{
+public class Test extends Notas{
 
 	int bien;
 	int mal;
@@ -19,17 +19,17 @@ public class Test extends Tipo{
 			}
 			
 			for (int i = 0; i < mal; i++) {
-				nota-=bien/3;
+				nota-=(1/3);
 			}
 			
 		}
 		
-		return nota;
+		return nota/30*10;
 	}
 	
 	@Override
 	public String toString() {
-		return "bien: "+bien+", mal: "+mal+", "+super.toString();
+		return "bien: "+bien+", mal: "+mal+", "+ "nota: "+nota;
 	}
 	
 }

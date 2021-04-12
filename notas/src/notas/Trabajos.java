@@ -1,40 +1,45 @@
 package notas;
 
-import java.util.ArrayList;
 
-public class Trabajos {
 
-	ArrayList <Boolean> entregados = new ArrayList <Boolean>(3);
+public class Trabajos extends Notas{
+
+	protected boolean trabajo;
+	protected int retraso;
+
 	
-	public Trabajos() {
+	
+	public Trabajos(boolean trabajo, int retraso) {
+		this.trabajo=trabajo;
+		this.retraso=retraso;
 		
 	}
 	
-	public Trabajos(boolean trabajo1, boolean trabajo2, boolean trabajo3) {
-		entregados.add(trabajo1);
-		entregados.add(trabajo2);
-		entregados.add(trabajo3);
-	}
-	
-	public boolean trabajosHechos() {
-	boolean aprob=true;
-		if (entregados.get(0) ==false ||entregados.get(1) ==false || entregados.get(2)==false) {
-			aprob=false;
+	public void trabajosHechos() {
+		if (retraso>5) {
+			trabajo=false;
 		}
 		else {
-			aprob=true;
+			for (int i = 0; i < retraso && retraso!=0 && retraso < 6; i++) {
+				nota_global-=0.1;
+			}
 		}
-		return aprob;
-	}
-	
-	public double calcularTrabajo (boolean aprsus) {
-		double nota=0;
 		
-		if (aprsus=false) {
-			nota=3;
+		
+		if (trabajo==false) {
+			setNota_global(3);
 		}
-		return nota ;
 	}
-	
+	@Override
+	public String toString() {
+		if (trabajo==true) {
+			return "entregado";
+		}
 
+		else {
+			return "no entregado";
+		}
+		
+	}
 }
+

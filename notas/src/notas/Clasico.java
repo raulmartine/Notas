@@ -1,9 +1,6 @@
 package notas;
 
-public class Clasico extends Tipo{
-	
-	
-
+public class Clasico extends Notas{
 	
 	public Clasico(double nota) {
 		this.nota=nota;
@@ -11,7 +8,7 @@ public class Clasico extends Tipo{
 	
 	@Override
 	public String toString() {
-		return super.toString();
+		return ""+nota;
 	}
 	
 }
