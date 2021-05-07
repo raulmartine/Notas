@@ -1,32 +1,35 @@
 package notas;
 
-import java.util.ArrayList;
-public class Alumnos {
-	//private ArrayList<Alumno> alumnos=new ArrayList<Alumno>(10);
-			private String nombre;
-			private String apellidos;
-			
-			public Alumnos() {
-				
-			}
-			public Alumnos(String nombre,String apellidos) {
-				this.nombre=nombre;
-				this.apellidos=apellidos;
-			}
+import static org.junit.jupiter.api.Assertions.*;
 
-			public String getNombre() {
-				return nombre;
-			}
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-			public void setNombre(String nombre) {
-				this.nombre = nombre;
-			}
-			
-			public String getApellidos() {
-				return apellidos;
-			}
+class Alumnos {
 
-			public void setApellidos(String apellidos) {
-				this.apellidos = apellidos;
-			}
+	@BeforeAll
+	static void setUpBeforeClass() throws Exception {
+		Alumno roberto =new Alumno("roberto","pepep","3456I");
+	}
+
+	@AfterAll
+	static void tearDownAfterClass() throws Exception {
+	}
+
+	@BeforeEach
+	void setUp() throws Exception {
+	}
+
+	@AfterEach
+	void tearDown() throws Exception {
+	}
+
+	@Test
+	void test() {
+		fail("Not yet implemented");
+	}
+
 }
