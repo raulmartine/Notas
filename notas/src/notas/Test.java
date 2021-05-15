@@ -1,35 +1,37 @@
 package notas;
 
-public class Test extends Notas{
+public class Test extends Examen{
 
-	int bien;
-	int mal;
-	public Test(int bien, int mal) {
-		this.bien=bien;
-		this.mal=mal;
-		nota=notaTest();
-	}
 	
-	public double notaTest() {
-		double nota=0;
-		int total=bien+mal;
-		if (total==30) {
-			for (int i = 0; i < bien; i++) {
-				nota++;
-			}
-			
-			for (int i = 0; i < mal; i++) {
-				nota-=(1/3);
-			}
-			
-		}
-		
-		return nota/30*10;
+	protected int correctas;
+	protected int incorrectas;
+	protected int nocontestadas;
+	
+	public Test(int correctas, int incorrectas, int nocontestadas) {
+		this.correctas=correctas;
+		this.incorrectas=incorrectas;
+		this.nocontestadas=nocontestadas;
+		calcularNota();
 	}
 	
 	@Override
 	public String toString() {
-		return "bien: "+bien+", mal: "+mal+", "+ "nota: "+nota;
+		return "nota: "+nota;
 	}
-	
+
+	public void calcularNota() {
+		int total=correctas+incorrectas+nocontestadas;
+        if (total==30) {
+            for (int i = 0; i < correctas; i++) {
+                nota++;
+            }
+            for (int i = 0; i < incorrectas; i++) {
+                nota-=(1/3);
+            }
+            nota=nota/30*10;  
+        }
+        else {
+        	System.out.println("Nota inválida, pon 30 en total.");
+		}
+    }
 }
