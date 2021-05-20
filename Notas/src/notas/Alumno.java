@@ -10,7 +10,7 @@ import java.util.ArrayList;
  * 
  */
 
-public class Alumno {
+public class Alumno extends Grupo {
 	/**
 	 * Atributo nombre
 	 * 
@@ -100,7 +100,7 @@ public class Alumno {
 	@Override
 	public String toString() {
 		
-		return "Nombre: "+nombre+"\n"+"Apellidos: "+apellidos+"\n"+"Nia: "+nia+"\n"+"Notas: "+examen+"\n"+"Trabajos: "+trabajos+"\n"+"Nota Global: "+nota_global;
+		return "\n"+"\n"+"Nombre: "+nombre+"\n"+"Apellidos: "+apellidos+"\n"+"Nia: "+nia+"\n"+"Notas: "+examen+"\n"+"Trabajos: "+trabajos+"\n"+"Nota Global: "+nota_global;
 	}
 
 	/**

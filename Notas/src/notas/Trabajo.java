@@ -60,7 +60,8 @@ public class Trabajo{
 	 */
 	
 	public double validarTrabajo(double nota_global) {
-		if (estado && nota_global!=3 && dias_retraso<=5) {
+		final int maxdiasretraso=5;
+		if (estado && nota_global!=3 && dias_retraso<=maxdiasretraso) {
 			nota_global=(nota_global-(dias_retraso*0.1));
 		}
 		else {

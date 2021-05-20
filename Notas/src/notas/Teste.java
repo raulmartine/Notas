@@ -66,14 +66,16 @@ public class Teste extends Examen{
 
 	public void calcularNota() {
 		int total=correctas+incorrectas+nocontestadas;
-        if (total==30) {
+		final int preguntastotal = 30;
+		final int restaporfallo = 1/3;
+        if (total==preguntastotal) {
             for (int i = 0; i < correctas; i++) {
                 nota++;
             }
             for (int i = 0; i < incorrectas; i++) {
-                nota-=(1/3);
+                nota-=restaporfallo;
             }
-            nota=nota/30*10;  
+            nota=nota/preguntastotal*10;  
         }
         else {
         	System.out.println("Nota inválida, pon 30 en total.");
